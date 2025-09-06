@@ -1,0 +1,27 @@
+{
+  "name": "chatbot-semaki-gede",
+  "version": "1.0.0",
+  "description": "Chatbot KKN Semaki Gede berbasis Grok API",
+  "main": "chatbot.js",
+  "type": "module",
+  "scripts": {
+    "start": "node chatbot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ferrel Ganendra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "body-parser": "^1.20.2",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "googleapis": "^159.0.0",
+    "groq-sdk": "^0.30.0",
+    "node-fetch": "^2.7.0",
+    "qrcode-terminal": "^0.12.0",
+    "readline": "^1.3.0",
+    "whatsapp-web.js": "^1.33.3"
+  }
+}
