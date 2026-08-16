@@ -1,13 +1,19 @@
 #!/usr/bin/env node
+require("dotenv").config();
+
 const fs = require("fs");
 const readline = require("readline");
 const { parse } = require("csv-parse/sync");
 const Groq = require("groq-sdk");
 
 // === CONFIG ===
-const client = new Groq({
-  apiKey: process.env.GROQ_API_KEY || "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",
-});
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+if (!GROQ_API_KEY) {
+  console.error("❌ GROQ_API_KEY belum diset di .env");
+  process.exit(1);
+}
+
+const client = new Groq({ apiKey: GROQ_API_KEY });
 const fasilitasCSV = "./semaki.csv";
 
 // === Fungsi baca CSV ===
